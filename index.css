@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F5F3ED;
+    --bg-secondary: #EAE7DE;
+    --card-bg: #FFFFFF;
+    --text-primary: #242923;
+    --text-secondary: #777B73;
+    --border-color: #DEDCD2;
+    --accent-forest: #496B55;
+    --accent-terracotta: #C17A5B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F5F3ED;
+    color: #242923;
+  }
+
+  body {
+    background-color: #F5F3ED;
+    color: #242923;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar - Warm Ivory & Charcoal */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DEDCD2;
+  border-radius: 9999px;
+  border: 1px solid #F5F3ED;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777B73;
+}
+
+/* Selection */
+::selection {
+  background: rgba(73, 107, 85, 0.2);
+  color: #242923;
+}
+
+/* Card utilities */
+.warm-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DEDCD2;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.warm-card:hover {
+  border-color: #CDCABF;
+  box-shadow: 0 4px 20px -4px rgba(36, 41, 35, 0.05);
+}
+
+/* Subtle architectural grid pattern on warm ivory */
+.bg-warm-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(36, 41, 35, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(36, 41, 35, 0.035) 1px, transparent 1px);
+}
